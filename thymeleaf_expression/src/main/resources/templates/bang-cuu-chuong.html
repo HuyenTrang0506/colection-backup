@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">-->
+    <link th:href="@{../css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <h1> Bảng cửu chương - <span th:text="${number}">0</span></h1>
+    <table class="table">
+        <tr th:each="i : ${#numbers.sequence(1,10)}">
+            <td th:text="${number}"></td>
+            <td>x</td>
+            <td th:text="${i}"></td>
+            <td>=</td>
+            <td th:text="${number*i}"></td>
+
+        </tr>
+    </table>
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>-->
+<script th:src="@{../js/bootstrap.bundle.min.js}">
+
+</script>
+</body>
+</html>
